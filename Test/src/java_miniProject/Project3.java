@@ -1,5 +1,6 @@
 package java_miniProject;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -17,7 +18,7 @@ public class Project3 {
 		System.out.println("숫자를 입력하시오.");
 		int score2= sc.nextInt();
 		
-		int max, min;
+		int max, min, sum=0, y=0;
 		if(score1<score2) {
 			max=score2;
 			min=score1;
@@ -26,13 +27,27 @@ public class Project3 {
 			min=score2;			
 		}
 		
-		int []arr1;
+		int []arr1  ;
 		
+		System.out.print("결과 :");
+				
 		for(int i= min;i<=max;i++) {
-			arr1= new[] arr1[max-min];
-			arr1[i]=i;
+			arr1= new int[]{max-min};
+			for(int j=0;j<arr1.length;j++) {
+				arr1[j]=i;
+			}
+			for(int x:arr1) {
+				System.out.print(x+", ");
+			}
+
 		}
-		
+		System.out.println(" ");
+		while( y<=max-min) {
+			sum+=min;
+			min++;
+			y++;
+		}
+		System.out.println(sum);
 		sc.close();
 	}
 }
