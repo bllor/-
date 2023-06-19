@@ -1,32 +1,31 @@
 package java_miniProject;
 
-import java.util.Scanner;
+
 
 /*
  * 날짜:2023/6/19
  * 이름:최동일
  * 내용:성적관리 프로그램 짜기
  */
-
+class Grade{
+	private String name;
+	private double korean;
+	private double english;
+	private double math;
+	
+	Grade(String name,double korean,double english,double math){
+		this.name=name;
+		this.korean=korean;
+		this.english=english;
+		this.math=math;
+		double average=(korean+english+math)/3;
+		
+		System.out.printf("%s의 평균점수는 %.2f\n",name,average);
+	}
+}
 public class Project1 {
 	public static void main(String[] args) {
-		Scanner sc= new Scanner(System.in);
-		System.out.print("이름: ");
-		String name=sc.next();
-		
-		System.out.print("국어점수: ");
-		int korean=sc.nextInt();
-		
-		System.out.print("영어점수: ");
-		int english=sc.nextInt();
-		
-		System.out.print("수학점수: ");
-		int math=sc.nextInt();
-		
-		
-		System.out.println(name);
-		System.out.println(korean);
-		System.out.println(english);
-		System.out.println(math);
+		Grade student1= new Grade("강백호",90.0,85.5,70.0);
+		Grade student2= new Grade("채치수",82.0,92.0,60.5);
 	}
 }
